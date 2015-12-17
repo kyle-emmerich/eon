@@ -1,0 +1,789 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"inter",
+				"intersect_ray_segment"
+			],
+			[
+				"g_v",
+				"g_VdH_1"
+			],
+			[
+				"roughne",
+				"roughness_y"
+			],
+			[
+				"rough",
+				"roughness_x"
+			],
+			[
+				"roughe",
+				"roughness_2"
+			],
+			[
+				"specul",
+				"specular_color"
+			],
+			[
+				"bread",
+				"doc_breadcrumb"
+			],
+			[
+				"succ",
+				"success_data"
+			],
+			[
+				"disab",
+				"disable_breadcrumb"
+			],
+			[
+				"border-radiu",
+				"border-bottom-left-radius"
+			],
+			[
+				"Mouse",
+				"MouseHoverControl"
+			],
+			[
+				"Rotation",
+				"RotationOffset"
+			],
+			[
+				"Rota",
+				"RotationDampening"
+			],
+			[
+				"A",
+				"AngularAcceleration"
+			],
+			[
+				"curre",
+				"currentFrameSet"
+			],
+			[
+				"Chara",
+				"CharacterPart"
+			],
+			[
+				"current",
+				"currentFrameSet"
+			],
+			[
+				"curr",
+				"currentFrameSet"
+			],
+			[
+				"for",
+				"for"
+			],
+			[
+				"Absolu",
+				"AbsolutePosition"
+			],
+			[
+				"Abso",
+				"AbsoluteSize"
+			],
+			[
+				"Absol",
+				"AbsolutePosition"
+			],
+			[
+				"c",
+				"c"
+			],
+			[
+				"Cache",
+				"CacheNextEdgeAndCorner"
+			],
+			[
+				"Creat",
+				"CreateYDummyOf"
+			],
+			[
+				"chunk",
+				"chunk_resolution"
+			],
+			[
+				"chun",
+				"chunk_resolution"
+			],
+			[
+				"aDMIN",
+				"AdminController"
+			],
+			[
+				"lat",
+				"latest_in_board"
+			],
+			[
+				"late",
+				"latest_in_thread"
+			],
+			[
+				"fi",
+				"first_in_thread"
+			],
+			[
+				"GROUPJOIN",
+				"GROUPJOIN_PASS"
+			],
+			[
+				"GROU",
+				"GROUPJOIN_ALREADY_PENDING_IN_GROUP"
+			],
+			[
+				"GROUP",
+				"GROUPJOIN_ALREADY_IN_GROUP"
+			],
+			[
+				"header",
+				"header_table"
+			],
+			[
+				"WikiA",
+				"WikiArticleRevision"
+			],
+			[
+				"wiki_",
+				"wiki_article_id"
+			],
+			[
+				"after_",
+				"after_endtag"
+			],
+			[
+				"cha",
+				"characters"
+			],
+			[
+				"Save",
+				"SaveConfig"
+			],
+			[
+				"last",
+				"last_tracking"
+			],
+			[
+				"shad",
+				"shadow_scale_x"
+			],
+			[
+				"s",
+				"shadow_scale_x"
+			],
+			[
+				"collision",
+				"collision_off_y"
+			],
+			[
+				"Initiali",
+				"InitializeRenderCanvas"
+			],
+			[
+				"Coll",
+				"CollisionOffX"
+			],
+			[
+				"Colli",
+				"CollisionOffY"
+			],
+			[
+				"coll",
+				"collision_off_y"
+			],
+			[
+				"Handl",
+				"HandleGameLayer"
+			],
+			[
+				"fragme",
+				"fragment_shader"
+			],
+			[
+				"hand",
+				"handshake_sent"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Z/Development/LOVE/gui/gui/init.lua",
+			"settings":
+			{
+				"buffer_size": 162,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "run.bat",
+			"settings":
+			{
+				"buffer_size": 213,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Development/LOVE/gui/gui/object.lua",
+			"settings":
+			{
+				"buffer_size": 128,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/eon.sublime-build",
+			"settings":
+			{
+				"buffer_size": 56,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/User/love.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/User/love.sublime-build",
+					""
+				],
+				[
+					"Packages/User/luajit.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/love.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/love.sublime-build",
+					""
+				],
+				[
+					"Packages/User/luajit.sublime-build",
+					""
+				],
+				[
+					"Packages/User/roblox.sublime-build",
+					""
+				],
+				[
+					"Packages/User/roblox.sublime-build",
+					"Open in Editor"
+				]
+			],
+			[
+				"Packages/User/love.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 156.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"add",
+				"Package Control: Add Repository"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 408.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Z/Development/LOVE/eon"
+	],
+	"file_history":
+	[
+		"/C/Users/Kyle/AppData/Local/Roblox/Plugins/navmap/plugin.lua",
+		"/Z/Users/Kyle/Desktop/cow decimated.obj",
+		"/Z/Development/Old Stuff (pre 6-20-15)/RPG Maker VX Ace/Beef Tornado/Data/Scripts.rvdata2",
+		"/Z/Users/Kyle/Desktop/number for erika.txt",
+		"/C/Users/Kyle/AppData/Local/Roblox/Plugins/circley/main.lua",
+		"/C/Users/Kyle/AppData/Local/Temp/Temp1_Glacier.zip/Glacier/game/ReplicatedStorage/Library/RenderBullet.lua",
+		"/C/Users/Kyle/AppData/Local/Temp/Temp1_Glacier.zip/Glacier/game/ReplicatedStorage/Services/CharacterService.lua",
+		"/C/Users/Kyle/AppData/Local/Temp/Temp1_Glacier.zip/Glacier/game/ReplicatedStorage/Tools/Spitfire/ClientData.lua",
+		"/C/Users/Kyle/AppData/Local/Temp/Temp1_Glacier.zip/Glacier/game/ReplicatedStorage/Classes/BasicWeapon.lua",
+		"/Z/Downloads/luasocket-2.0.2.tar.gz",
+		"/Z/Development/full dependencies/luasocket-2.0.2/src/http.lua",
+		"/Z/Downloads/luasec-luasec-0.5/luasec-luasec-0.5/README.md",
+		"/Z/Development/NoxAstra/Blueshift/Runtime/Engine/Scripts/Blueshift/Setup.lua",
+		"/C/Users/Kyle/AppData/Local/Temp/curl-7.40.0-devel-mingw64/build.txt",
+		"/C/Users/Kyle/AppData/Local/Temp/curl-7.40.0-devel-mingw64/README",
+		"/C/Users/Kyle/AppData/Local/Temp/curl-7.40.0-devel-mingw64/include/README",
+		"/Z/Development/NoxAstra/Blueshift/Dependencies/libcurl/include/curl/curl.h",
+		"/Z/Users/Kyle/Desktop/BlackPeakOrderBot",
+		"/Z/Users/Kyle/Desktop/Glacier/game/ReplicatedStorage/Classes/BasicWeapon.lua",
+		"/Z/Users/Kyle/Desktop/Glacier/game/ReplicatedStorage/Tools/Spitfire/ServerData.lua",
+		"/Z/Users/Kyle/Desktop/Glacier/game/ServerScriptService/server.lua",
+		"/Z/Users/Kyle/Desktop/Glacier/game/StarterPlayer/StarterPlayerScripts/client.lua",
+		"/Z/Users/Kyle/Desktop/test.ssml",
+		"/Z/Development/ROBLOX/onlinebuild/Pressure.rbxlx",
+		"/Z/Development/LOVE/gui/main.lua",
+		"/Z/Development/LOVE/gui/poop/init.lua",
+		"/Z/Development/LOVE/gui/poop/test/init.lua",
+		"/Z/Users/Kyle/Desktop/Glacier/game/ReplicatedStorage/Tools/Spitfire/ClientData.lua",
+		"/Z/Users/Kyle/Desktop/Glacier/game/ReplicatedStorage/Services/CharacterService.lua",
+		"/Z/Users/Kyle/Desktop/Glacier/game/ReplicatedStorage/Library/RenderBullet.lua",
+		"/Z/Users/Kyle/Desktop/Glacier/game/StarterPlayer/StarterPlayerScripts/ErrorReporter.lua",
+		"/Z/Downloads/luasec-luasec-0.5/luasec-luasec-0.5/INSTALL",
+		"/C/Users/Kyle/AppData/Local/Temp/Temp1_Glacier.zip/Glacier/game/ReplicatedStorage/Services/UIService.lua",
+		"/C/Users/Kyle/AppData/Local/Temp/Temp1_Glacier.zip/Glacier/game/ReplicatedStorage/Library/SlackAPI.lua",
+		"/Z/Development/eon/main.lua",
+		"/Z/Development/eon/client/init.lua",
+		"/Z/Development/eon/server/init.lua",
+		"/Z/Development/eon/run.bat",
+		"/Z/Development/eon/shared/cdata.lua",
+		"/Z/Development/eon/conf.lua",
+		"/Z/Development/eon/shared/core/object.lua",
+		"/Z/Development/eon/shared/game/ship.lua",
+		"/Z/Development/eon/shared/networking/packets.lua",
+		"/C/Users/Kyle/Blueshift/log.txt",
+		"/Z/Development/NoxAstra/Blueshift/README.md",
+		"/Z/Development/eon/shared/core/vec2.lua",
+		"/Z/Development/eon/shared/core/deriv.lua",
+		"/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/love.sublime-build",
+		"/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/eon.sublime-build",
+		"/Z/Development/eon/shared/core/vec2_slow.lua",
+		"/Z/Development/eon/client/main.lua",
+		"/Z/Development/eon/shared/class.lua",
+		"/Z/Development/fun-game/conf.lua",
+		"/Z/Downloads/LocalSettings.php",
+		"/Z/Development/NoxAstra/Blueshift/Runtime/Engine/app.cfg",
+		"/Z/Development/fun-game/main.lua",
+		"/Z/Development/fun-game/bump.lua",
+		"/Z/Development/NoxAstra/Website/resources/views/layouts/static.blade.php",
+		"/C/Users/Kyle/AppData/Local/Temp/randomlua.lua",
+		"/C/Users/Kyle/AppData/Local/Temp/fallout4_tools_0002/0002/fallout4tools_readme.txt",
+		"/Z/Development/NoxAstra/Website/app/User.php",
+		"/Z/Development/NoxAstra/Website/app/Http/Controllers/UserController.php",
+		"/Z/Development/NoxAstra/Website/resources/views/user/register.blade.php",
+		"/Z/Development/NoxAstra/Website/public/js/dynamic.js",
+		"/C/Users/Kyle/Documents/PassMark/PerformanceTest/Baselines.cfg",
+		"/Z/Downloads/ship_heavyfighter_v1.obj",
+		"/Z/Development/NoxAstra/Blueshift/.gitignore",
+		"/Z/Development/NoxAstra/Blueshift/Runtime/Engine/Bin/EngineDebug.exp",
+		"/Z/Development/NoxAstra/Website/public/js/chat.js",
+		"/Z/Development/NoxAstra/Website/app/Formatting.php",
+		"/Z/Development/NoxAstra/Website/app/Http/Controllers/CommunityController.php",
+		"/Z/Development/NoxAstra/Blueshift/Runtime/Engine/Assets/sphere.obj",
+		"/Z/Development/NoxAstra/Blueshift/Dependencies/physfs/include/lzma/lzma.txt",
+		"/Z/Development/NoxAstra/Blueshift/Dependencies/physfs/include/lzma/Methods.txt",
+		"/Z/Development/NoxAstra/Blueshift/Dependencies/physfs/minimized.txt",
+		"/C/Users/Kyle/Blueshift",
+		"/Z/Development/NoxAstra/Blueshift/Dependencies/physfs/include/lzma/7zFormat.txt",
+		"/Z/Development/NoxAstra/Blueshift/Dependencies/physfs/include/lzma/history.txt",
+		"/Z/Development/NoxAstra/Blueshift/Dependencies/physfs/include/lzma/7zC.txt",
+		"/Z/Development/NoxAstra/Blueshift/Runtime/Engine/Assets/ball.obj",
+		"/C/Users/Kyle/AppData/Local/Temp/Temp1_NShader_2015.zip/README.md",
+		"/Z/Development/NoxAstra/Blueshift/Runtime/Engine/Assets/bunny.obj",
+		"/Z/Development/NoxAstra/Blueshift/Documentation/Code Style.md",
+		"/Z/Development/NoxAstra/bgfx/src/bgfx_shader.sh",
+		"/Z/Development/NoxAstra/Blueshift/Runtime/Engine/Assets/sphere.mtl",
+		"/Z/Development/NoxAstra/Blueshift/Assets/Shaders/debug_fs.sc",
+		"/Z/Development/NoxAstra/Blueshift/Assets/Shaders/varying.def.sc",
+		"/Z/Development/NoxAstra/Blueshift/Assets/Shaders/bgfx_shader.sh",
+		"/Z/Development/NoxAstra/Blueshift/Assets/Shaders/debug_vs.sc",
+		"/C/Users/Kyle/AppData/Local/Temp/spline.h",
+		"/Z/Development/NoxAstra/bgfx/scripts/shaderc.lua",
+		"/Z/Development/NoxAstra/bgfx/scripts/bgfx.lua",
+		"/Z/Development/NoxAstra/Website/resources/views/blog/newpost.blade.php",
+		"/Z/Development/NoxAstra/Website/resources/views/user/settings.blade.php",
+		"/Z/Development/NoxAstra/Website/public/js/upload.js",
+		"/Z/Development/NoxAstra/bgfx-master/README.md",
+		"/Z/Development/NoxAstra/chatserv/index.js",
+		"/Z/Development/NoxAstra/Website/app/Http/Controllers/APIController.php",
+		"/Z/Development/NoxAstra/Website/resources/views/chat/list.blade.php",
+		"/Z/Development/NoxAstra/Website/public/css/app.css",
+		"/Z/Development/NoxAstra/Website/resources/views/user/profile.blade.php",
+		"/Z/Development/NoxAstra/chatserv/chat_frame.html",
+		"/Z/Development/NoxAstra/Website/public/js/chat/ui.js",
+		"/Z/Development/NoxAstra/Website/public/js/chat/user.js",
+		"/Z/Development/NoxAstra/Website/public/js/bbcode.js",
+		"/Z/Development/NoxAstra/Website/app/Http/routes.php",
+		"/Z/Development/NoxAstra/Website/resources/views/chat-test.blade.php",
+		"/Z/Development/NoxAstra/Website/app/Http/Controllers/ForumsController.php",
+		"/Z/Development/NoxAstra/Website/resources/views/layouts/embedded.blade.php",
+		"/Z/Development/NoxAstra/Website/public/js/main.js",
+		"/Z/Development/NoxAstra/Website/resources/views/layouts/master.blade.php",
+		"/Z/Development/NoxAstra/Website/resources/views/forums/category.blade.php",
+		"/Z/Development/NoxAstra/Website/resources/views/forums/home.blade.php",
+		"/Z/Development/NoxAstra/Website/resources/views/forums/newdiscussion.blade.php",
+		"/Z/Development/NoxAstra/Website/resources/views/forums/discussion.blade.php",
+		"/Z/Development/NoxAstra/Website/public/js/forums.js",
+		"/Z/Development/NoxAstra/Website/resources/views/embed-test.blade.php",
+		"/Z/Development/NoxAstra/Website/resources/views/chat/test.blade.php",
+		"/C/Program Files (x86)/SafeConnect/Version.txt",
+		"/Z/Development/NoxAstra/Website/app/LoginToken.php",
+		"/Z/Development/NoxAstra/chatserv/sftp-config.json",
+		"/Z/Media/Music/PINK FLOYD - Discography 2011 Remasters [Bubanee]/1967 - The Piper At The Gates Of Dawn 2011 Remaster/The Piper at the Gates of Dawn.cue",
+		"/Z/Media/Music/PINK FLOYD - Discography 2011 Remasters [Bubanee]/1967 - The Piper At The Gates Of Dawn 2011 Remaster/Pink Floyd - The Piper at the Gates of Dawn.m3u",
+		"/Z/Development/NoxAstra/Website/resources/views/story.blade.php",
+		"/Z/Development/NoxAstra/Website/resources/views/privacy.blade.php",
+		"/Z/Development/NoxAstra/Website/app/Http/Controllers/HomeController.php",
+		"/Z/Development/NoxAstra/Website/app/Forums/Category.php",
+		"/Z/Development/NoxAstra/Website/resources/views/blog/home.blade.php"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 110.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"1",
+			"return",
+			"console.log",
+			"e",
+			"messages",
+			"btn",
+			"category-card",
+			">\n",
+			"love",
+			"media",
+			"]===]",
+			"7",
+			"self",
+			"renderDispla",
+			"renderDisplay",
+			"end",
+			"line",
+			"b.y_edge",
+			"a.y_edge",
+			"d.position",
+			"c.x_edge",
+			"c.position",
+			"b.position",
+			"a.x_edge",
+			"a.position",
+			"AddVertex",
+			"IsPlayerAdminAsync",
+			"Util.Create'Frame'",
+			"Util.Create",
+			"Create(",
+			"Create {",
+			"Panel.Position",
+			"plugins",
+			"wiki",
+			"{\n",
+			"os.ex",
+			"load_file",
+			"Get(",
+			"__index",
+			"FullyLoad",
+			"os.execute",
+			"])\n",
+			"FullyLoad()",
+			"montreal",
+			"america/los_angeles"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"self.edge_cache_max",
+			"self.edge_cache_min",
+			"self.row_cache_max[i + 2]",
+			"self.row_cache_max[i + 1]",
+			"self.row_cache_max[i]",
+			"self.row_cache_min[i + 2]",
+			"self.row_cache_min[i + 1]",
+			"self.row_cache_min[i]"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Z/Development/LOVE/gui/gui/init.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Lua - Copy/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "run.bat",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								213,
+								213
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Batch File/Batch File.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Z/Development/LOVE/gui/gui/object.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								128,
+								128
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/Lua - Copy/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/eon.sublime-build",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 56,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								40
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 305.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 98.0
+	},
+	"pinned_build_system": "Packages/User/eon.sublime-build",
+	"project": "eon.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"idk\\Core.clua"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 400.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
