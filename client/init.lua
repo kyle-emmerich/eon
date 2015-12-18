@@ -3,71 +3,39 @@ local vec2 = require 'shared.core.vec2'
 local Serializer = require 'shared.core.serializer'
 
 local Ship = require 'shared.game.ship'
+local ShipHull = require 'shared.game.shiphull'
 
 local client = {}
 
- test_obj = nil
+local ship = nil
 
 function client.load(args)
-	test_obj = Object:new(vec2(100, 100), vec2(0, 0), 0, 0)
-	test_obj.mass = 1.25
-	
-	local objects = {}
-	for i = 1, 10 do
-		objects[i] = Object:new(vec2(i, i), vec2(i, i), i, i)
-		objects[i].mass = 2.5
-		print(objects[i].state.pos)
-	end
-
-	local ser_test = Serializer:new()
-	ser_test:Put(test_obj)
-
-	local ship = Ship:new()
-	ship.name = "tortoise dicks"
-	print(ship.state)
-	ser_test:Put(ship)
-
-	ser_test:PutString("poop")
-	local array = ser_test:PutArray(Object, objects)
-
-	local buf = ser_test:Write(true, 'lz4')
-
-
-	local read_test = Serializer:new()
-	read_test:Read(buf)
-
-	local obj = read_test:Get(Object, 1)
-	print(obj.state.pos)
-
-	print(read_test:Get(Ship, 1).name)
-
-
-	local objects_d = read_test:GetArray(Object, array)
-	for i = 1, 10 do
-		print(objects_d[i].state.pos)
-	end
+	ShipHull.static.init()
+	ship = Ship:new(ShipHull.static.hulls[1])
+	ship:SetHull(ShipHull.static.hulls[1])
+	ship.custom_color.r = 133
+	ship.custom_color.g = 211
+	ship.custom_color.b = 237
 end
 
 function client.update(dt)
+	local torque = 3e7
+	local force = 5e8
 	if love.keyboard.isDown('a') then
-		test_obj:ApplyTorque(-500)
+		ship:ApplyTorque(-torque)
 	end
 	if love.keyboard.isDown('d') then
-		test_obj:ApplyTorque(500)
+		ship:ApplyTorque(torque)
 	end
 	if love.keyboard.isDown('w') then
-		test_obj:ApplyForce(vec2(math.cos(test_obj.rot_state.x) * 5000, math.sin(test_obj.rot_state.x) * 5000))
+		
+		ship:ApplyForce(vec2(math.cos(ship.rot_state.x) * force, math.sin(ship.rot_state.x) * force))
 	end
-	test_obj:Update(dt)
+	ship:Update(dt)
 end
 
-function client.draw()
-	love.graphics.push()
-	
-	love.graphics.translate(test_obj.state.pos.x, test_obj.state.pos.y)
-	love.graphics.rotate(test_obj.rot_state.x)
-	love.graphics.rectangle('fill', -10, -5, 20, 10)
-	love.graphics.pop()
+function client.draw()	
+	ship:Render()
 end
 
 function client.quit()
