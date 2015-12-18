@@ -28,7 +28,7 @@ end
 function Ship:AddComponent(component)
 	table.insert(self.components, component)
 	component.ship = self
-end
+end 
 
 function Ship:Serialize(serializer)
 	local data = Ship.data()
