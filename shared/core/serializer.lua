@@ -125,6 +125,9 @@ end
 function Serializer:GetArray(class_, array)
 	local offset = array.offset
 	local length = array.length
+	if length == 0 then
+		return {}
+	end
 	local section = self.sections[self.section_map[class_.name]]
 	local data = self.section_ptrs[self.section_map[class_.name]]
 	

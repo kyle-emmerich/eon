@@ -23,6 +23,7 @@ function client.load(args)
 	ser_test:Put(test_obj)
 
 	local ship = Ship:new()
+	ship.name = "tortoise dicks"
 	print(ship.state)
 	ser_test:Put(ship)
 
@@ -37,6 +38,8 @@ function client.load(args)
 
 	local obj = read_test:Get(Object, 1)
 	print(obj.state.pos)
+
+	print(read_test:Get(Ship, 1).name)
 
 
 	local objects_d = read_test:GetArray(Object, array)
