@@ -8,4 +8,4 @@ If you're on Windows and want to use run.bat, just change the variables at the t
     
 Replace [FOLDER] with the path to where main.lua resides, without including main.lua itself. In other words, the game directory.
 
-Requires LOVE 0.10.0, but might run on older.
+Requires LOVE 0.10.0. You can download 0.10.0 binaries [here](https://love2d.org/builds/).
