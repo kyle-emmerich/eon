@@ -122,7 +122,7 @@ end
 
 function Object:Render()
 	if self.renderable then
-		self.renderable:Render()
+		self.renderable:Render(self, self.state.pos, self.rot_state.x)
 	end
 end
 

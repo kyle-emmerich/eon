@@ -3,20 +3,20 @@ local vec2 = require 'shared.core.vec2'
 local Object = require 'shared.core.object'
 
 local Renderable = class('Renderable')
-function Renderable:initialize(pos, rot)
+function Renderable:initialize()
 	self.parent = nil
 	self.children = {}
 
 	self.position = vec2(0, 0)
 	self.rotation = 0
-	
+
 	self.color = { 255, 255, 255, 255 }
 end
 
-function Renderable:_render()
+function Renderable:_render(object)
 	love.graphics.rectangle('line', -24, -24, 48, 48)
-	love.graphics.line(-24, -24, 48, 48)
-	love.graphics.line(-24, 48, 48, -24)
+	love.graphics.line(-24, -24, 24, 24)
+	love.graphics.line(-24, 24, 24, -24)
 end
 
 function Renderable:RecalculateBounds()
@@ -42,16 +42,16 @@ function Renderable:RemoveChild(child)
 	self:RecalculateBounds()
 end
 
-function Renderable:Render(position, rotation)
+function Renderable:Render(object, position, rotation)
 	position = position or self.position
 	rotation = rotation or self.rotation
 
 	love.graphics.push()
 	love.graphics.translate(position.x, position.y)
 	love.graphics.rotate(rotation)
-	self:_render()
+	self:_render(object)
 	for i, v in ipairs(self.children) do
-		v:Render()
+		v:Render(object)
 	end
 	love.graphics.pop()
 end
