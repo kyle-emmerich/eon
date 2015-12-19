@@ -6,7 +6,6 @@ local ShipHull = require 'shared.game.shiphull'
 local ShipComponent = require 'shared.game.shipcomponent'
 
 local ffi = require 'ffi'
-
 ffi.cdef [[
 
 typedef struct {
@@ -35,6 +34,8 @@ end
 function Ship:AddComponent(component)
 	table.insert(self.components, component)
 	component.ship = self
+
+	self:RecalculateMass()
 end 
 
 function Ship:SetHull(hull)
@@ -42,6 +43,11 @@ function Ship:SetHull(hull)
 	self.renderable = hull
 
 	self:RecalculateMass()
+end
+
+function Ship:Update(dt)
+	Object.Update(self, dt)
+	self.rot_state.y = self.rot_state.y * 0.95
 end
 
 function Ship:RecalculateMass()
