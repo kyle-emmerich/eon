@@ -4,15 +4,6 @@ local Renderable = require 'shared.core.renderable'
 local ShipHull = class('ShipHull', Renderable)
 ShipHull.static.hulls = {}
 ShipHull.static.init = function()
-	ShipHull.static.shader = love.graphics.newShader(
-		[[
-vec4 position( mat4 transform_projection, vec4 vertex_position )
-{
-	return transform_projection * vertex_position;
-}
-		]],
-		love.filesystem.read('shared/asset/shader/lit.fs')
-	)
 	require 'shared.asset.shiphulls'
 end
 function ShipHull:initialize(data)
@@ -34,11 +25,10 @@ function ShipHull:initialize(data)
 	self.occlusion = love.graphics.newImage(self.path .. '/occlusion.png')
 end
 
-function ShipHull:_render(ship)
+function ShipHull:_render(rendersystem, ship)
 	love.graphics.scale(self.scale)
 
-	local shader = ShipHull.static.shader
-	love.graphics.setShader(shader)
+	local shader = rendersystem.shader_lit
 	shader:send('normal_tex', self.normal)
 	shader:send('custom_tex', self.custom)
 	shader:send('occlusion_tex', self.occlusion)
@@ -46,14 +36,10 @@ function ShipHull:_render(ship)
 	local custom_color = ship.custom_color
 	shader:sendColor('custom_color', { custom_color.r, custom_color.g, custom_color.b, 255 })
 
-	shader:sendColor('ambient_light', { 50, 50, 50, 0 })
-
+	shader:send('velocity', { ship.state.vel.x * love.timer.getDelta() , ship.state.vel.y * love.timer.getDelta() })
 	shader:send('rotation', ship.rot_state.x)
 
 	love.graphics.draw(self.diffuse, 0, 0, 0, 1, 1, self.diffuse:getWidth()/2, self.diffuse:getHeight()/2)
-
-
-	love.graphics.setShader()
 end
 
 return ShipHull

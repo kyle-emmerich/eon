@@ -1,26 +1,41 @@
 local Object = require 'shared.core.object'
 local vec2 = require 'shared.core.vec2'
+local uuid = require 'shared.core.uuid'
 local Serializer = require 'shared.core.serializer'
+
+local RenderSystem = require 'shared.core.rendersystem'
+
+local System = require 'shared.game.system'
 
 local Ship = require 'shared.game.ship'
 local ShipHull = require 'shared.game.shiphull'
 
-local client = {}
+local client = {
+	rendersystem = false
+
+}
 
 local ship = nil
 
 function client.load(args)
 	ShipHull.static.init()
+
+	client.rendersystem = RenderSystem:new()
+	client.rendersystem.current_system = System:new()
+
+	
 	ship = Ship:new(ShipHull.static.hulls[1])
 	ship:SetHull(ShipHull.static.hulls[1])
 	ship.custom_color.r = 133
 	ship.custom_color.g = 211
 	ship.custom_color.b = 237
+
+	client.rendersystem.current_system:AddObject(ship)
 end
 
 function client.update(dt)
-	local torque = 3e7
-	local force = 5e8
+	local torque = 7e3
+	local force = 5e5
 	if love.keyboard.isDown('a') then
 		ship:ApplyTorque(-torque)
 	end
@@ -28,14 +43,13 @@ function client.update(dt)
 		ship:ApplyTorque(torque)
 	end
 	if love.keyboard.isDown('w') then
-		
 		ship:ApplyForce(vec2(math.cos(ship.rot_state.x) * force, math.sin(ship.rot_state.x) * force))
 	end
 	ship:Update(dt)
 end
 
 function client.draw()	
-	ship:Render()
+	client.rendersystem:Render()
 end
 
 function client.quit()
@@ -80,8 +94,11 @@ function client.run()
 		love.graphics.present()
 
 		collectgarbage()
-		love.timer.sleep(0.001)
+		--love.timer.sleep(0.001)
 	end
+
+	collectgarbage()
+	collectgarbage()
 end
 
 return client

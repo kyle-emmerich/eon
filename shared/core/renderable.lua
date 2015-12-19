@@ -13,7 +13,7 @@ function Renderable:initialize()
 	self.color = { 255, 255, 255, 255 }
 end
 
-function Renderable:_render(object)
+function Renderable:_render(rendersystem, object)
 	love.graphics.rectangle('line', -24, -24, 48, 48)
 	love.graphics.line(-24, -24, 24, 24)
 	love.graphics.line(-24, 24, 24, -24)
@@ -42,16 +42,16 @@ function Renderable:RemoveChild(child)
 	self:RecalculateBounds()
 end
 
-function Renderable:Render(object, position, rotation)
+function Renderable:Render(rendersystem, object, position, rotation)
 	position = position or self.position
 	rotation = rotation or self.rotation
 
 	love.graphics.push()
 	love.graphics.translate(position.x, position.y)
 	love.graphics.rotate(rotation)
-	self:_render(object)
+	self:_render(rendersystem, object)
 	for i, v in ipairs(self.children) do
-		v:Render(object)
+		v:Render(rendersystem, object)
 	end
 	love.graphics.pop()
 end

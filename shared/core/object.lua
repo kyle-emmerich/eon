@@ -120,9 +120,9 @@ function Object:Update(dt)
 	end
 end
 
-function Object:Render()
+function Object:Render(rendersystem)
 	if self.renderable then
-		self.renderable:Render(self, self.state.pos, self.rot_state.x)
+		self.renderable:Render(rendersystem, self, self.state.pos, self.rot_state.x)
 	end
 end
 
