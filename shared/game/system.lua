@@ -20,7 +20,7 @@ function System:AddObject(object, no_sort)
 end
 
 function System:RemoveObject(object)
-	for i, v in ipairs(self.objects)
+	for i, v in ipairs(self.objects) do
 		if v == object then
 			object.system = false
 			table.remove(self.objects, i)
@@ -34,10 +34,10 @@ function System:Update(dt)
 	end
 end
 
-function System:Render()
+function System:Render(rendersystem)
 	--todo: replace this with better optimized version
 	for i, v in ipairs(self.objects) do
-		v:Render()
+		v:Render(rendersystem)
 	end
 end
 
