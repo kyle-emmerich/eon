@@ -7,7 +7,7 @@ ShipHull:new {
 
 	path = 'shared/asset/ships/kepler',
 
-	mass = 14180,
+	mass = 14.180,
 
 	scale = 0.5
 }
