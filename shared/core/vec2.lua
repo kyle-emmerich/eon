@@ -83,6 +83,11 @@ end
 function fn:copy()
 	return new_vec2(self:xy())
 end
+function fn:from(other)
+	self.x = other.x
+	self.y = other.y
+	return self
+end
 function fn.from_angle(angle)
 	return new_vec2(math.cos(angle), math.sin(angle))
 end
