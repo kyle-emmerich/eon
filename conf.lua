@@ -4,7 +4,7 @@ function conf_client(t)
 	t.window.height = 720
 	t.window.title = "Eon"
 	t.window.vsync = true
-	t.window.fsaa = 4
+	t.window.fsaa = 16
 	t.window.display = 1
 	t.window.srgb = false
 	t.window.resizable = true
