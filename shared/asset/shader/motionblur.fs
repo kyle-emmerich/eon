@@ -12,8 +12,8 @@ vec4 effect(vec4 color, Image canvas_scene, vec2 texture_coords, vec2 screen_coo
 		vec4 s = Texel(canvas_scene, texture_coords + offset);
 		col += vec4(s.xyz * s.a, 0.0);
 	}
-	vec4 output = col / float(NUM_SAMPLES);
-	output.a = 1.0;
+	vec4 result = col / float(NUM_SAMPLES);
+	result.a = 1.0;
 
-	return output;
+	return result;
 }
