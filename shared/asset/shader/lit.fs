@@ -21,11 +21,11 @@ void effects(vec4 color, Image diffuse_tex, vec2 texture_coords, vec2 screen_coo
 
 	normal *= 2.0;
 	normal -= 1.0;
-	normal *= vec3(1.0, -1.0, 1.0);
+	normal.x *= -1.0;
 
 	vec3 world = normal.xyz;
-	world.x = normal.x * cos(-rotation) - normal.y * sin(-rotation);
-	world.y = normal.x * sin(-rotation) + normal.y * cos(-rotation);
+	world.x = normal.x * cos(rotation) + normal.y * sin(rotation);
+	world.y = normal.x * sin(rotation) - normal.y * cos(rotation);
 	world.z = normal.z;
 	world = normalize(world);
 

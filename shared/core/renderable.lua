@@ -56,4 +56,8 @@ function Renderable:Render(rendersystem, object, position, rotation)
 	love.graphics.pop()
 end
 
+function Renderable:RenderLight(rendersystem, object)
+	--nothing
+end
+
 return Renderable

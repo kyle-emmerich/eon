@@ -5,6 +5,8 @@ local Serializer = require 'shared.core.serializer'
 
 local RenderSystem = require 'shared.core.rendersystem'
 
+local PointLight = require 'shared.core.pointlight'
+
 local System = require 'shared.game.system'
 
 local Ship = require 'shared.game.ship'
@@ -23,8 +25,15 @@ function client.load(args)
 	client.rendersystem = RenderSystem:new()
 	client.rendersystem.current_system = System:new()
 
+	local light = PointLight:new()
+	light.color = {255, 255, 255, 255}
+	local object = Object:new(vec2(100, 100), vec2(0, 0), 0, 0)
+	object:SetRenderable(light)
+	client.rendersystem.current_system:AddObject(object)
+
 	
 	ship = Ship:new(ShipHull.static.hulls[1])
+	ship.state.pos = vec2(100, 100)
 	ship:SetHull(ShipHull.static.hulls[1])
 	ship.custom_color.r = 133
 	ship.custom_color.g = 211
@@ -45,7 +54,10 @@ function client.update(dt)
 	if love.keyboard.isDown('w') then
 		ship:ApplyForce(vec2(math.cos(ship.rot_state.x) * force, math.sin(ship.rot_state.x) * force))
 	end
-	ship:Update(dt)
+	if love.keyboard.isDown('s') then
+		ship.state.vel:iscale(0.95)
+	end
+	client.rendersystem.current_system:Update(dt)
 end
 
 function client.draw()	
@@ -54,6 +66,10 @@ end
 
 function client.quit()
 
+end
+
+function client.resize()
+	client.rendersystem:Resize()
 end
 
 

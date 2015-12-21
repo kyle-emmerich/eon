@@ -125,6 +125,11 @@ function Object:Render(rendersystem)
 		self.renderable:Render(rendersystem, self, self.state.pos, self.rot_state.x)
 	end
 end
+function Object:RenderLight(rendersystem)
+	if self.renderable then
+		self.renderable:RenderLight(rendersystem, self)
+	end
+end
 
 function Object:Serialize(serializer)
 	local data = Object.data()

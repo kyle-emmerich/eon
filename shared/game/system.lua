@@ -41,4 +41,10 @@ function System:Render(rendersystem)
 	end
 end
 
+function System:RenderLight(rendersystem)
+	for i, v in ipairs(self.objects) do
+		v:RenderLight(rendersystem)
+	end
+end
+
 return System

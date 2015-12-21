@@ -6,7 +6,7 @@ function conf_client(t)
 	t.window.vsync = true
 	t.window.fsaa = 16
 	t.window.display = 1
-	t.window.srgb = false
+	t.window.srgb = true
 	t.window.resizable = true
 
 	t.modules.audio = true

@@ -1,6 +1,6 @@
 local class = require 'shared.class'
 
-local dx, dy, dz = 1.0, 0.0, -0.0
+local dx, dy, dz = 0.5, 0.5, -0.0
 local len = math.sqrt(dx * dx + dy * dy + dz * dz)
 dx = dx / len
 dy = dy / len
@@ -30,7 +30,10 @@ function RenderSystem:initialize()
 		vertex_code,
 		love.filesystem.read('shared/asset/shader/lit.fs')
 	)
-	self.shader_point = false
+	self.shader_point = love.graphics.newShader(
+		vertex_code,
+		love.filesystem.read('shared/asset/shader/point.fs')
+	)
 	self.shader_directional = love.graphics.newShader(
 		vertex_code,
 		love.filesystem.read('shared/asset/shader/directional.fs')
@@ -61,24 +64,34 @@ end
 function RenderSystem:Render()
 	if self.current_system then
 		love.graphics.setBlendMode('alpha', 'alphamultiply')
+
+		love.graphics.setCanvas(self.diffuse)
+		love.graphics.clear(0, 0, 0, 0)
+		love.graphics.setCanvas(self.info)
+		love.graphics.clear(127, 127, 0, 255)
+
 		love.graphics.setCanvas(self.diffuse, self.info, self.velocity)
-		love.graphics.clear()
 		
 		love.graphics.setShader(self.shader_lit)
 		self.current_system:Render(self)
 
 		love.graphics.setCanvas(self.light)
-		love.graphics.clear(60, 60, 60, 0)
+		love.graphics.clear(30, 30, 30, 0)
 		love.graphics.setBlendMode('add', 'premultiplied')
 		love.graphics.setShader(self.shader_directional)
 		self.shader_directional:send('light_dir', {dx, dy, dz})
-		self.shader_directional:sendColor('light_color', {255, 255, 255, 255})
+		self.shader_directional:sendColor('light_color', {125, 125, 125, 255})
 		self.shader_directional:send('specularity', 256.0)
 		
-		love.graphics.draw(self.info)
+		--love.graphics.draw(self.info)
 
+		love.graphics.setShader(self.shader_point)
+		self.shader_point:send('canvas_diffuse', self.diffuse)
+		self.shader_point:send('canvas_info', self.info)
+		self.shader_point:send('specularity', 16.0)
+		self.shader_point:send('canvas_size', self.size)
+		self.current_system:RenderLight(self)
 
-		
 		love.graphics.setCanvas(self.final)
 		love.graphics.clear()
 		love.graphics.setShader(self.shader_combine)
@@ -94,9 +107,10 @@ function RenderSystem:Render()
 
 		self.shader_motionblur:send('canvas_velocity', self.velocity)
 		self.shader_motionblur:send('canvas_size', self.size)
-		love.graphics.setBlendMode("replace")
+		love.graphics.setShader()
+		love.graphics.setBlendMode('alpha', 'premultiplied')
 		love.graphics.draw(self.final)
-
+		love.graphics.setBlendMode('alpha', 'alphamultiply')
 	end
 
 	love.graphics.setShader()

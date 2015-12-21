@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"compone",
+				"components_length"
+			],
+			[
+				"component",
+				"components_offset"
+			],
+			[
 				"inter",
 				"intersect_ray_segment"
 			],
@@ -212,7 +220,55 @@
 	"buffers":
 	[
 		{
-			"file": "/Z/Development/LOVE/gui/gui/init.lua",
+			"file": "main.lua",
+			"settings":
+			{
+				"buffer_size": 251,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/init.lua",
+			"settings":
+			{
+				"buffer_size": 1597,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shared/game/shipcomponent.lua",
+			"settings":
+			{
+				"buffer_size": 284,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/Program Files (x86)/Steam/steamapps/common/RollerCoaster Tycoon Deluxe/Scenarios/SC82.SC4",
+			"settings":
+			{
+				"buffer_size": 589687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "run.bat",
+			"settings":
+			{
+				"buffer_size": 240,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shared/game/ship.lua",
+			"settings":
+			{
+				"buffer_size": 1735,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shared/asset/shiphulls.lua",
 			"settings":
 			{
 				"buffer_size": 162,
@@ -220,26 +276,18 @@
 			}
 		},
 		{
-			"file": "run.bat",
+			"file": "shared/game/shiphull.lua",
 			"settings":
 			{
-				"buffer_size": 213,
+				"buffer_size": 1702,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/Z/Development/LOVE/gui/gui/object.lua",
+			"file": "shared/core/system.lua",
 			"settings":
 			{
-				"buffer_size": 128,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/eon.sublime-build",
-			"settings":
-			{
-				"buffer_size": 56,
+				"buffer_size": 881,
 				"line_ending": "Windows"
 			}
 		}
@@ -342,10 +390,34 @@
 	},
 	"expanded_folders":
 	[
-		"/Z/Development/LOVE/eon"
+		"/Z/Development/LOVE/eon",
+		"/Z/Development/LOVE/eon/client",
+		"/Z/Development/LOVE/eon/server",
+		"/Z/Development/LOVE/eon/shared",
+		"/Z/Development/LOVE/eon/shared/asset",
+		"/Z/Development/LOVE/eon/shared/asset/shader",
+		"/Z/Development/LOVE/eon/shared/asset/ships",
+		"/Z/Development/LOVE/eon/shared/core",
+		"/Z/Development/LOVE/eon/shared/game",
+		"/Z/Development/LOVE/eon/shared/networking"
 	],
 	"file_history":
 	[
+		"/Z/Development/LOVE/eon/shared/core/renderable.lua",
+		"/Z/Development/LOVE/eon/shared/core/object.lua",
+		"/Z/Development/LOVE/eon/shared/core/color.lua",
+		"/Z/Development/LOVE/eon/shared/asset/shader/lit.fs",
+		"/Z/Development/LOVE/eon/shared/core/serializer.lua",
+		"/Z/Development/LOVE/eon/README.md",
+		"/Z/Development/LOVE/eon/shared/game/shiphull.lua",
+		"/Z/Development/LOVE/eon/shared/asset/shiphulls.lua",
+		"/Z/Development/LOVE/eon/shared/class.lua",
+		"/Z/Development/LOVE/eon/shared/core/vec2.lua",
+		"/Z/Development/LOVE/eon/shared/core/deriv.lua",
+		"/Z/Development/LOVE/eon/run.bat",
+		"/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/eon.sublime-build",
+		"/Z/Development/LOVE/gui/gui/object.lua",
+		"/Z/Development/LOVE/gui/gui/init.lua",
 		"/C/Users/Kyle/AppData/Local/Roblox/Plugins/navmap/plugin.lua",
 		"/Z/Users/Kyle/Desktop/cow decimated.obj",
 		"/Z/Development/Old Stuff (pre 6-20-15)/RPG Maker VX Ace/Beef Tornado/Data/Scripts.rvdata2",
@@ -394,7 +466,6 @@
 		"/Z/Development/eon/shared/core/vec2.lua",
 		"/Z/Development/eon/shared/core/deriv.lua",
 		"/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/love.sublime-build",
-		"/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/eon.sublime-build",
 		"/Z/Development/eon/shared/core/vec2_slow.lua",
 		"/Z/Development/eon/client/main.lua",
 		"/Z/Development/eon/shared/class.lua",
@@ -459,21 +530,7 @@
 		"/Z/Development/NoxAstra/Website/resources/views/layouts/master.blade.php",
 		"/Z/Development/NoxAstra/Website/resources/views/forums/category.blade.php",
 		"/Z/Development/NoxAstra/Website/resources/views/forums/home.blade.php",
-		"/Z/Development/NoxAstra/Website/resources/views/forums/newdiscussion.blade.php",
-		"/Z/Development/NoxAstra/Website/resources/views/forums/discussion.blade.php",
-		"/Z/Development/NoxAstra/Website/public/js/forums.js",
-		"/Z/Development/NoxAstra/Website/resources/views/embed-test.blade.php",
-		"/Z/Development/NoxAstra/Website/resources/views/chat/test.blade.php",
-		"/C/Program Files (x86)/SafeConnect/Version.txt",
-		"/Z/Development/NoxAstra/Website/app/LoginToken.php",
-		"/Z/Development/NoxAstra/chatserv/sftp-config.json",
-		"/Z/Media/Music/PINK FLOYD - Discography 2011 Remasters [Bubanee]/1967 - The Piper At The Gates Of Dawn 2011 Remaster/The Piper at the Gates of Dawn.cue",
-		"/Z/Media/Music/PINK FLOYD - Discography 2011 Remasters [Bubanee]/1967 - The Piper At The Gates Of Dawn 2011 Remaster/Pink Floyd - The Piper at the Gates of Dawn.m3u",
-		"/Z/Development/NoxAstra/Website/resources/views/story.blade.php",
-		"/Z/Development/NoxAstra/Website/resources/views/privacy.blade.php",
-		"/Z/Development/NoxAstra/Website/app/Http/Controllers/HomeController.php",
-		"/Z/Development/NoxAstra/Website/app/Forums/Category.php",
-		"/Z/Development/NoxAstra/Website/resources/views/blog/home.blade.php"
+		"/Z/Development/NoxAstra/Website/resources/views/forums/newdiscussion.blade.php"
 	],
 	"find":
 	{
@@ -562,24 +619,87 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Z/Development/LOVE/gui/gui/init.lua",
+					"file": "main.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 162,
+						"buffer_size": 251,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								162,
-								162
+								251,
+								251
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Lua - Copy/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/init.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1597,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								450,
+								450
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Lua - Copy/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "shared/game/shipcomponent.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								258,
+								258
 							]
 						],
 						"settings":
@@ -595,20 +715,51 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "run.bat",
-					"semi_transient": true,
+					"buffer": 3,
+					"file": "/Z/Program Files (x86)/Steam/steamapps/common/RollerCoaster Tycoon Deluxe/Scenarios/SC82.SC4",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 213,
+						"buffer_size": 589687,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								213,
-								213
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "run.bat",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								42
 							]
 						],
 						"settings":
@@ -622,24 +773,118 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/Z/Development/LOVE/gui/gui/object.lua",
+					"buffer": 5,
+					"file": "shared/game/ship.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 128,
+						"buffer_size": 1735,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								128,
-								128
+								1004,
+								1004
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Lua - Copy/Lua.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "shared/asset/shiphulls.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 162,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								159,
+								159
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Lua - Copy/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "shared/game/shiphull.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1702,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								704,
+								704
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Lua - Copy/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "shared/core/system.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								636,
+								636
 							]
 						],
 						"settings":
@@ -651,38 +896,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/eon.sublime-build",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 56,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -725,7 +939,7 @@
 	},
 	"output.exec":
 	{
-		"height": 305.0
+		"height": 39.0
 	},
 	"output.find_results":
 	{
