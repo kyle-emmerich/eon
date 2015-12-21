@@ -32,8 +32,8 @@ function Object:initialize(pos, vel, rot, rot_vel)
 	self.orbital_major = 0
 	self.orbital_minor = 0
 
-	self.force = vec2(0, 0)
-	self.torque = 0
+	self._force = vec2(0, 0)
+	self._torque = 0
 	self.linear_accel = vec2(0, 0)
 	self.rot_accel = 0
 
@@ -43,16 +43,17 @@ function Object:initialize(pos, vel, rot, rot_vel)
 	self.z = 0
 end
 
-function Object:ApplyForce(vector)
-	self.force:iadd(vector)
+function Object:ApplyForce(vx, vy)
+	self._force.x = self._force.x + vx
+	self._force.y = self._force.y + vy
 end
 function Object:ApplyTorque(magnitude)
-	self.torque = self.torque + magnitude
+	self._torque = self._torque + magnitude
 end
 
-function Object:ApplyImpulse(vector)
-	self.state.vel.x = self.state.vel.x + (vector.x / self.mass)
-	self.state.vel.y = self.state.vel.y + (vector.y / self.mass)
+function Object:ApplyImpulse(vx, vy)
+	self.state.vel.x = self.state.vel.x + (vx / self.mass)
+	self.state.vel.y = self.state.vel.y + (vy / self.mass)
 end
 
 function Object:ApplyAngularImpulse(magnitude)
@@ -102,10 +103,10 @@ function Object:Update(dt)
 		self.state.vel.x = self.orbiting.state.vel.x - self.orbital_major * math.sin(theta) * d_theta
 		self.state.vel.y = self.orbiting.state.vel.y + self.orbital_minor * math.cos(theta) * d_theta
 	else
-		self.force:iscale(dt):iscale(1 / self.mass)
-		self.linear_accel:iadd(self.force)
-		self.torque = (self.torque * dt) / self.mass
-		self.rot_accel = self.rot_accel + self.torque
+		self._force:iscale(dt):iscale(1 / self.mass)
+		self.linear_accel:iadd(self._force)
+		self._torque = (self._torque * dt) / self.mass
+		self.rot_accel = self.rot_accel + self._torque
 
 		local steps = 4
 		dt = dt / steps
@@ -113,8 +114,8 @@ function Object:Update(dt)
 			deriv.step(self, dt)
 		end
 
-		self.force:iscale(0)
-		self.torque = 0
+		self._force:iscale(0)
+		self._torque = 0
 		self.linear_accel:iscale(0)
 		self.rot_accel = 0
 	end

@@ -33,10 +33,13 @@ ShipComponent.static.Types = {
 }
 ShipComponent.static.components = {}
 ShipComponent.static.init = function()
-	local files = love.filesystem.getDirectoryItems('shared/game/components')
+	local path = 'shared/game/components/'
+	local files = love.filesystem.getDirectoryItems(path)
 	for i, v in ipairs(files) do
+		v = path .. v
 		if love.filesystem.isFile(v) and v:sub(-4) == '.lua' then
-			local comp_type = love.filesystem.load(v)(ShipComponent)
+			local chunk = love.filesystem.load(v)
+			local comp_type = chunk(ShipComponent)
 			if comp_type.static.init then
 				comp_type.static.init()
 			end
@@ -51,6 +54,10 @@ function ShipComponent:initialize()
 
 	self.active = false
 	self.tag = false
+
+	self.name = false
+	self.description = false
+	self.mass = 1
 end
 
 function ShipComponent:_serialize_metadata(serializer, data)
@@ -61,21 +68,36 @@ function ShipComponent:_deserialize_metadata(serializer, metadata)
 
 end
 
-function ShipComponent:LoadFromSubtypeInfo()
-	error('LoadFromSubtypeInfo not implemented on ' .. self.class.name)
-end
+
 function ShipComponent:GetSubtypeInfo()
-	return nil
+	return {}
+end
+function ShipComponent:LoadFromSubtypeInfo()
+	if not self.subtype_uid then
+		error("No subtype set!")
+	end
+
+	local info = self:GetSubtypeInfo()
+	self.name = info.name or "Invalid Engine"
+	self.description = info.description or ""
+	self.mass = info.mass or 1
+	self.thrust = info.thrust or 1
+
+	return info
 end
 
 function ShipComponent:GetName()
-	return self:GetSubtypeInfo().name
+	return self.name
 end
 function ShipComponent:GetDescription()
-	return self:GetSubtypeInfo().description
+	return self.description
 end
 function ShipComponent:GetMass()
-	return self:GetSubtypeInfo().mass
+	return self.mass
+end
+
+function ShipComponent:Apply(ship)
+	ship.mass = ship.mass + self:GetMass()
 end
 
 function ShipComponent:Serialize(serializer)

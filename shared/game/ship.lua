@@ -29,20 +29,35 @@ function Ship:initialize()
 	self.components = {}
 
 	self.custom_color = color{ 255, 255, 255, 255 }
+
+	self.thrust = 0
+	self.torque = 0
 end
 
 function Ship:AddComponent(component)
 	table.insert(self.components, component)
 	component.ship = self
 
-	self:RecalculateMass()
+	self:RecalculateParameters()
 end 
 
 function Ship:SetHull(hull)
 	self.hull = hull
 	self.renderable = hull
 
-	self:RecalculateMass()
+	self:RecalculateParameters()
+end
+
+function Ship:ApplyInput(input)
+	if input.forward then
+		self:ApplyForce(math.cos(self.rot_state.x) * self.thrust, math.sin(self.rot_state.x) * self.thrust)
+	end
+	if input.left then
+		self:ApplyTorque(-self.torque)
+	end
+	if input.right then
+		self:ApplyTorque(self.torque)
+	end
 end
 
 function Ship:Update(dt)
@@ -50,10 +65,16 @@ function Ship:Update(dt)
 	self.rot_state.y = self.rot_state.y * 0.95
 end
 
-function Ship:RecalculateMass()
+function Ship:RecalculateParameters()
 	self.mass = self.hull.mass
 
-	--add component masses
+	self.thrust = 0
+	self.torque = 0
+
+	for i, v in ipairs(self.components) do
+		v:Apply(self)
+	end
+
 end
 
 function Ship:Serialize(serializer)

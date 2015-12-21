@@ -11,6 +11,7 @@ local System = require 'shared.game.system'
 
 local Ship = require 'shared.game.ship'
 local ShipHull = require 'shared.game.shiphull'
+local ShipComponent = require 'shared.game.shipcomponent'
 
 local client = {
 	rendersystem = false
@@ -21,15 +22,18 @@ local ship = nil
 
 function client.load(args)
 	ShipHull.static.init()
+	ShipComponent.static.init()
 
 	client.rendersystem = RenderSystem:new()
 	client.rendersystem.current_system = System:new()
 
-	local light = PointLight:new()
-	light.color = {255, 255, 255, 255}
-	local object = Object:new(vec2(100, 100), vec2(0, 0), 0, 0)
-	object:SetRenderable(light)
-	client.rendersystem.current_system:AddObject(object)
+	for i = 1, 10 do
+		local light = PointLight:new()
+		light.color = {255, 255, 255, 255}
+		local object = Object:new(vec2(100 * i, 100 * i), vec2(30, 0), 0, 0)
+		object:SetRenderable(light)
+		client.rendersystem.current_system:AddObject(object)
+	end
 
 	
 	ship = Ship:new(ShipHull.static.hulls[1])
@@ -39,24 +43,38 @@ function client.load(args)
 	ship.custom_color.g = 211
 	ship.custom_color.b = 237
 
+
+	local engine = ShipComponent.static.components[ShipComponent.static.Types.Engine]:new()
+	engine.subtype_uid = 'expengx1'
+	engine:LoadFromSubtypeInfo()
+	local engine2 = ShipComponent.static.components[ShipComponent.static.Types.Engine]:new()
+	engine2.subtype_uid = 'expengx1'
+	engine2:LoadFromSubtypeInfo()
+	local sidefarts = ShipComponent.static.components[ShipComponent.static.Types.AttitudeControl]:new()
+	sidefarts.subtype_uid = 'sidefart'
+	sidefarts:LoadFromSubtypeInfo()
+	ship:AddComponent(engine)
+	ship:AddComponent(engine2)
+	ship:AddComponent(sidefarts)
+
 	client.rendersystem.current_system:AddObject(ship)
 end
 
+local input = {}
 function client.update(dt)
-	local torque = 7e3
-	local force = 5e5
+	input.forward = false
+	input.left = false
+	input.right = false
 	if love.keyboard.isDown('a') then
-		ship:ApplyTorque(-torque)
+		input.left = true
 	end
 	if love.keyboard.isDown('d') then
-		ship:ApplyTorque(torque)
+		input.right = true
 	end
 	if love.keyboard.isDown('w') then
-		ship:ApplyForce(vec2(math.cos(ship.rot_state.x) * force, math.sin(ship.rot_state.x) * force))
+		input.forward = true
 	end
-	if love.keyboard.isDown('s') then
-		ship.state.vel:iscale(0.95)
-	end
+	ship:ApplyInput(input)
 	client.rendersystem.current_system:Update(dt)
 end
 

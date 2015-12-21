@@ -19,7 +19,6 @@ function PointLight:RenderLight(rendersystem, object)
 	rendersystem.shader_point:sendColor('light_color', self.color)
 	rendersystem.shader_point:send('light_radius', self.radius)
 
-	print(px, py)
 	--love.graphics.rectangle('fill', 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 	love.graphics.circle('fill', px, py, self.radius * 1.2, 32)
 end

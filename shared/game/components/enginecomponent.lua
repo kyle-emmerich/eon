@@ -21,19 +21,24 @@ EngineComponent.static.init = function()
 end
 function EngineComponent:initialize()
 	ShipComponent.initialize(self)
+
+	self.thrust = 0
 end
 
-function EngineComponent:LoadFromSubtypeInfo()
-	if not self.subtype then
-		error("No subtype set!")
-	end
-
-	local info = self:GetSubtypeInfo()
-end
 function EngineComponent:GetSubtypeInfo()
-	return EngineComponent.static.subtypes[self.subtype_uid]
+	return EngineComponent.static.subtypes[self.subtype_uid] or {}
+end
+function EngineComponent:LoadFromSubtypeInfo()
+	local info = ShipComponent.LoadFromSubtypeInfo(self)
+	self.thrust = info.thrust or 1
+
+	return info
 end
 
+function EngineComponent:Apply(ship)
+	ShipComponent.Apply(self, ship)
 
+	ship.thrust = ship.thrust + self.thrust
+end
 
 return EngineComponent
