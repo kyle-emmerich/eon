@@ -1,3 +1,10 @@
+local UI = require 'client.ui'
+UI.Frame = require 'client.ui.frame'
+UI.Button = require 'client.ui.button'
+UI.Stack = require 'client.ui.stack'
+UI.TextInput = require 'client.ui.textinput'
+local UDim = require 'client.ui.udim'
+
 local Object = require 'shared.core.object'
 local vec2 = require 'shared.core.vec2'
 local uuid = require 'shared.core.uuid'
@@ -13,14 +20,14 @@ local Ship = require 'shared.game.ship'
 local ShipHull = require 'shared.game.shiphull'
 local ShipComponent = require 'shared.game.shipcomponent'
 
-local client = {
-	rendersystem = false
-
-}
+local client = require 'client.client'
+client.rendersystem = false
 
 local ship = nil
 
 function client.load(args)
+	local ip = args[3] or "127.0.0.1"
+	client.connect(ip)
 	ShipHull.static.init()
 	ShipComponent.static.init()
 
@@ -58,28 +65,74 @@ function client.load(args)
 	ship:AddComponent(sidefarts)
 
 	client.rendersystem.current_system:AddObject(ship)
+
+	UI:Load(require 'client.ui.control')
+
+	local frame = UI.Frame:new()
+	frame.udim = UDim:new(0, 400, 0, 400, 0, 400, 0, 300)
+	frame:SetParent(UI.root)
+	frame:SetText("Bite my ass")
+
+	local stack = UI.Stack:new()
+	stack:SetParent(frame)
+
+	for i = 1, 2 do
+		local button = UI.Button:new()
+		button:SetHeight(50)
+		button:SetText("Smell me")
+		button:SetMargins(5, 5, 5, 0)
+		button:SetParent(stack)
+	end
+
+	local textinput = UI.TextInput:new()
+	textinput:SetHeight(40)
+	textinput:SetMargins(5, 5, 5, 0)
+	textinput:SetParent(stack)
+
+	local password = UI.TextInput:new()
+	password:SetHeight(40)
+	password:SetMargins(5, 5, 5, 0)
+	password:SetParent(stack)
+	password.mask = true
+
+	stack:Invalidate()
+	frame:Layout()
+
+	local exo2 = require 'shared.asset.font.exo2'
+	love.graphics.setFont(exo2:Get('regular', 'regular', 18))
+
+	love.keyboard.setKeyRepeat(true)
 end
 
 local input = {}
 function client.update(dt)
+	client.network_update(dt)
+
 	input.forward = false
 	input.left = false
 	input.right = false
-	if love.keyboard.isDown('a') then
-		input.left = true
-	end
-	if love.keyboard.isDown('d') then
-		input.right = true
-	end
-	if love.keyboard.isDown('w') then
-		input.forward = true
+	if UI.focused == false then
+		if love.keyboard.isDown('a') then
+			input.left = true
+		end
+		if love.keyboard.isDown('d') then
+			input.right = true
+		end
+		if love.keyboard.isDown('w') then
+			input.forward = true
+		end
 	end
 	ship:ApplyInput(input)
 	client.rendersystem.current_system:Update(dt)
+
+	UI:Update(dt)
 end
 
 function client.draw()	
+	love.graphics.setColor(255, 255, 255, 255)
 	client.rendersystem:Render()
+
+	UI:Render()
 end
 
 function client.quit()
@@ -90,6 +143,24 @@ function client.resize()
 	client.rendersystem:Resize()
 end
 
+function client.mousepressed(x, y, idx)
+	UI:MouseDown(x, y, idx)
+end
+
+function client.mousereleased(x, y, idx)
+	UI:MouseUp(x, y, idx)
+end
+
+function client.textinput(text)
+	UI:InputText(text)
+end
+
+function client.keypressed(key, scancode, is_repeat)
+	UI:KeyDown(key, scancode, is_repeat)
+end
+function client.keyreleased(key, scancode, is_repeat)
+	UI:KeyUp(key, scancode, is_repeat)
+end
 
 function client.run()
 	love.math.setRandomSeed(os.time())

@@ -4,16 +4,16 @@ function conf_client(t)
 	t.window.height = 720
 	t.window.title = "Eon"
 	t.window.vsync = true
-	t.window.fsaa = 16
-	t.window.display = 1
+	t.window.msaa = 8
 	t.window.srgb = true
 	t.window.resizable = true
+	t.window.display = 2
 
 	t.modules.audio = true
 	t.modules.event = true
 	t.modules.graphics = true
 	t.modules.image = true
-	t.modules.joystick = false
+	t.modules.joystick = true
 	t.modules.keyboard = true
 	t.modules.math = true
 	t.modules.mouse = true

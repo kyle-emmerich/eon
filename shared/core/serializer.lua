@@ -150,7 +150,8 @@ function Serializer:GetArray(class_, array)
 	return objects
 end
 
-function Serializer:Get(class_, index)
+function Serializer:Get(class_, index, object)
+	index = index or 0
 	local section = self.sections[self.section_map[class_.name]]
 	local data = self.section_ptrs[self.section_map[class_.name]]
 	local ptr = ffi.cast(class_.name .. '_data*', data)
@@ -162,7 +163,7 @@ function Serializer:Get(class_, index)
 		error("Index out of bounds for Serializer:Get(" .. class_.name .. ", " .. index .. "), only have " .. section.length)
 	end
 
-	local object = class_:new()
+	object = object or class_:new()
 	object:Deserialize(self, ptr[index - 1])
 	return object
 end
